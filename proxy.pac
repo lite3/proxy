@@ -1,8 +1,9 @@
 function FindProxyForURL(url,host){
-    if(shExpMatch(url,"*.facebook.*")||
-    	shExpMatch(url,"*.cz88.*")||
-    	shExpMatch(url,"*.google.*")||
-    	shExpMatch(url,"*fonts.gstatic.com*")||
+	if(shExpMatch(url,"*.facebook.*")||
+	shExpMatch(url,"*.cz88.*")||
+	shExpMatch(url,"*.google.*")||
+	shExpMatch(url,"*fonts.gstatic.com*")||
+	shExpMatch(url,"*googlesyndication.com*")||
 	shExpMatch(url,'*twimg.com*')||
 	shExpMatch(url,'*googleusercontent.com*')||
 	shExpMatch(url,'*github.com*')||
@@ -81,10 +82,9 @@ function FindProxyForURL(url,host){
 	shExpMatch(url,'*.jp*')||
 	shExpMatch(url,'*.hk*')||
 	shExpMatch(url,'*.tk*')||
-    shExpMatch(url,"*.ip138.*")){
-      return "SOCKS5 127.0.0.1:7070; DIRECT;";
-    }
-    else{
-      return "DIRECT";
-    }
+	shExpMatch(url,"*.ip138.*")){
+		return "SOCKS5 127.0.0.1:7070; DIRECT;";
+	} else {
+		return "DIRECT";
+	}
 }
