@@ -1,7 +1,8 @@
 function FindProxyForURL(url,host){
     if(shExpMatch(url,"*.facebook.*")||
-    shExpMatch(url,"*.cz88.*")||
-    shExpMatch(url,"*.google.*")||
+    	shExpMatch(url,"*.cz88.*")||
+    	shExpMatch(url,"*.google.*")||
+    	shExpMatch(url,"*fonts.gstatic.com*")||
 	shExpMatch(url,'*twimg.com*')||
 	shExpMatch(url,'*googleusercontent.com*')||
 	shExpMatch(url,'*github.com*')||
