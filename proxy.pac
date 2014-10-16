@@ -6,7 +6,6 @@ function FindProxyForURL(url,host){
 	shExpMatch(host,"*googlesyndication.com*")||
 	shExpMatch(host,'*twimg.com*')||
 	shExpMatch(host,'*googleusercontent.com*')||
-	shExpMatch(host,'*github.com*')||
 	shExpMatch(host,'*box.com*')||
 	shExpMatch(host,'*dropbox.com*')||
 	shExpMatch(host,'*tweetmarker.net*')||
