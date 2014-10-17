@@ -32,7 +32,7 @@ function FindProxyForURL(url,host){
 	shExpMatch(host,'*inc.gs*')||
 	shExpMatch(host,'*fbcdn.net*')||
 	shExpMatch(host,'*twitter.com*')||
-	shExpMatch(host,'*bit.ly/')||
+	shExpMatch(host,'*bit.ly')||
 	shExpMatch(host,'*t.co*')||
 	shExpMatch(host,'*evernote.com*')||
 	shExpMatch(host,'*facebook.com*')||
