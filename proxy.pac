@@ -1,90 +1,86 @@
+var blackList = [
+'google.com',
+'gstatic.com',
+'googlecode.com',
+'googlesyndication.com',
+'googleusercontent.com',
+'googlepages.com',
+'googleapis.com',
+'google-analytics.com',
+'googlevideo.com',
+'gmail.com',
+'android.com',
+'youtube.com',
+'facebook.com',
+'twitter.com',
+'bit.l',
+'twimg.com',
+'box.com',
+'dropbox.com',
+'tweetmarker.net',
+'path.com',
+'qx.net',
+'igfw.net',
+'wikipedia.org',
+'wikimedia.org',
+'markmail.org',
+'live.com',
+'appledaily.com',
+'cloudfront.net',
+'ufree.org',
+'youversion.com',
+'mac.com',
+'instagr.am',
+'qooza.hk',
+'akamaihd.net',
+'inc.gs',
+'fbcdn.net',
+'t.co',
+'evernote.com',
+'picturedip.com',
+'pandora.com',
+'pinporn.com',
+'nextmedia.com',
+'legend.pandafan.org',
+'t66y.com',
+'flickr.com',
+'net.au',
+'sha7.info',
+'blogspot.com',
+'wordpress.com',
+'yahoo.com',
+'nytimes.com',
+'sex.com',
+'radiotime.com',
+'heqinglian.net',
+'instagram.com',
+'biz.tm',
+'outlook.com',
+'tcno.net',
+'asana.com',
+'microsoft.com',
+'hkheadline.com',
+'ytimg.com',
+'akamai.net',
+'hootsuite.com',
+'hkepc.com',
+'yfrog.com',
+'pandora.com',
+'rdio.com',
+'rdio.com',
+'p-cdn.com',
+'akamaihd.net',
+'simrworldwide.com',
+'scorecardresearch.com',
+];
+
 function FindProxyForURL(url,host){
-	if(shExpMatch(host,"*.facebook.*")||
-	shExpMatch(host,"*.cz88.*")||
-	shExpMatch(host,"*.google.*")||
-	shExpMatch(host,"*gstatic.com*")||
-	shExpMatch(host,"*googlesyndication.com*")||
-	shExpMatch(host,'*twimg.com*')||
-	shExpMatch(host,'*googleusercontent.com*')||
-	shExpMatch(host,'*box.com*')||
-	shExpMatch(host,'*dropbox.com*')||
-	shExpMatch(host,'*tweetmarker.net*')||
-	shExpMatch(host,'*path.com*')||
-	shExpMatch(host,'*googlecode.com*')||
-	shExpMatch(host,'*qx.net*')||
-	shExpMatch(host,'*igfw.net*')||
-	shExpMatch(host,'*wikipedia.org*')||
-	shExpMatch(host,'*wikimedia.org*')||
-	shExpMatch(host,'*youtube.com*')||
-	shExpMatch(host,'*markmail.org*')||
-	shExpMatch(host,'*live.com*')||
-	shExpMatch(host,'*appledaily.com*')||
-	shExpMatch(host,'*cloudfront.net*')||
-	shExpMatch(host,'*ufree.org*')||
-	shExpMatch(host,'*youversion.com*')||
-	shExpMatch(host,'*mac.com*')||
-	shExpMatch(host,'*instagr.am*')||
-	shExpMatch(host,'*qooza.hk*')||
-	shExpMatch(host,'*akamaihd.net*')||
-	shExpMatch(host,'*googlepages.com*')||
-	shExpMatch(host,'*googleapis.com*')||
-	shExpMatch(host,'*google-analytics.com*')||
-	shExpMatch(host,'*inc.gs*')||
-	shExpMatch(host,'*fbcdn.net*')||
-	shExpMatch(host,'*twitter.com*')||
-	shExpMatch(host,'*bit.ly')||
-	shExpMatch(host,'*t.co*')||
-	shExpMatch(host,'*evernote.com*')||
-	shExpMatch(host,'*facebook.com*')||
-	shExpMatch(host,'*picturedip.com*')||
-	shExpMatch(host,'*pandora.com*')||
-	shExpMatch(host,'*pinporn.com*')||
-	shExpMatch(host,'*nextmedia.com*')||
-	shExpMatch(host,'*legend.pandafan.org*')||
-	shExpMatch(host,'*google.com.hk*')||
-	shExpMatch(host,'*t66y.com*')||
-	shExpMatch(host,'*flickr.com*')||
-	shExpMatch(host,'*gmail.com*')||
-	shExpMatch(host,'*net.au*')||
-	shExpMatch(host,'*sha7.info*')||
-	shExpMatch(host,'*blogspot.com*')||
-	shExpMatch(host,'*wordpress.com*')||
-	shExpMatch(host,'*yahoo.com*')||
-	shExpMatch(host,'*nytimes.com*')||
-	shExpMatch(host,'*sex.com*')||
-	shExpMatch(host,'*radiotime.com*')||
-	shExpMatch(host,'*heqinglian.net*')||
-	shExpMatch(host,'*instagram.com*')||
-	shExpMatch(host,'*biz.tm*')||
-	shExpMatch(host,'*google.com*')||
-	shExpMatch(host,'*outlook.com*')||
-	shExpMatch(host,'*tcno.net*')||
-	shExpMatch(host,'*asana.com*')||
-	shExpMatch(host,'*microsoft.com*')||
-	shExpMatch(host,'*hkheadline.com*')||
-	shExpMatch(host,'*ytimg.com*')||
-	shExpMatch(host,'*akamai.net*')||
-	shExpMatch(host,'*hootsuite.com*')||
-	shExpMatch(host,'*hkepc.com*')||
-	shExpMatch(host,'*yfrog.com*')||
-	shExpMatch(host,'*googlevideo.com*')||
-	shExpMatch(host,'*com.hk*')||
-	shExpMatch(host,'*google.cn*')||
-	shExpMatch(host,'*pandora.com*')||
-	shExpMatch(host,'*rdio.com*')||
-	shExpMatch(host,'*rdio.com*')||
-	shExpMatch(host,'*p-cdn.com*')||
-	shExpMatch(host,'*akamaihd.net*')||
-	shExpMatch(host,'*simrworldwide.com*')||
-	shExpMatch(host,'*scorecardresearch.com*')||
-	shExpMatch(host,'*android.com*')||
-	shExpMatch(host,'*.tw*')||
-	shExpMatch(host,'*.jp*')||
-	shExpMatch(host,'*.hk*')||
-	shExpMatch(host,'*.tk*')||
-	shExpMatch(host,"*.ip138.*")){
-		return "SOCKS5 127.0.0.1:7070; DIRECT;";
-	} else {
-		return "DIRECT";
+	for (var h in blackList) {
+		if (h.indexOf(host) >= 0) {
+			return 'SOCKS5 127.0.0.1:7070; DIRECT;';
+		}
 	}
+	return 'DIRECT';
 }
+
+// shExpMatch(host, '*.google.com')
