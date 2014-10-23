@@ -75,11 +75,13 @@ var blackList = [
 ];
 
 function FindProxyForURL(url,host){
-	for (var h in blackList) {
-		if (h.indexOf(host) >= 0) {
-			return 'SOCKS5 127.0.0.1:7070; DIRECT;';
-		}
-	}
+    var len = blackList.length;
+    var i = 0;
+    for (i; i < len; i++) {
+        if (host.indexOf(blackList[i]) >= 0) {
+            return 'SOCKS5 127.0.0.1:7070; DIRECT;';
+        }
+    }
 	return 'DIRECT';
 }
 
