@@ -72,6 +72,7 @@ var blackList = [
 'akamaihd.net',
 'simrworldwide.com',
 'scorecardresearch.com',
+'linode.com',
 ];
 
 function FindProxyForURL(url,host){
