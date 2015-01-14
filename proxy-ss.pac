@@ -11,6 +11,8 @@ var blackList = [
 'gmail.com',
 'android.com',
 'youtube.com',
+'github.com',
+'githubusercontent.com',
 'facebook.com',
 'twitter.com',
 'bit.l',
