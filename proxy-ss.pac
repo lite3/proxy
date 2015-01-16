@@ -14,6 +14,7 @@ var blackList = [
 'github.com',
 'githubusercontent.com',
 'travis-ci.org',
+'ws.pusherapp.com',
 'facebook.com',
 'twitter.com',
 'bit.l',
