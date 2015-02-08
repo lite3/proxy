@@ -52,6 +52,7 @@ var blackList = [
 'sha7.info',
 'blogspot.com',
 'wordpress.com',
+'s.w.org',
 'yahoo.com',
 'nytimes.com',
 'sex.com',
