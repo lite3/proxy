@@ -72,7 +72,6 @@ var blackList = [
 'yfrog.com',
 'pandora.com',
 'rdio.com',
-'rdio.com',
 'p-cdn.com',
 'akamaihd.net',
 'simrworldwide.com',
