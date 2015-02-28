@@ -8,6 +8,7 @@ var blackList = [
 'googleapis.com',
 'google-analytics.com',
 'googlevideo.com',
+'googleadservices.com',
 'gmail.com',
 'android.com',
 'youtube.com',
