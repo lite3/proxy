@@ -10,6 +10,7 @@ var blackList = [
 'googlevideo.com',
 'googleadservices.com',
 'gmail.com',
+'chrome.com',
 'android.com',
 'youtube.com',
 'google.co.jp',
