@@ -88,7 +88,7 @@ function FindProxyForURL(url,host){
     var i = 0;
     for (i; i < len; i++) {
         if (host.indexOf(blackList[i]) >= 0) {
-            return 'SOCKS5 127.0.0.1:7070; DIRECT;';
+            return 'test.qypac.net:55920; DIRECT;';
         }
     }
 	return 'DIRECT';
